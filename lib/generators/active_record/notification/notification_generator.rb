@@ -8,7 +8,7 @@ module ActiveRecord
       source_root File.expand_path("../templates", __FILE__)
 
       def create_observer_file
-        template 'notification.rb', File.join('app/models', class_path, "virtual_machine_observer.rb")
+        template 'notification.rb', File.join('app/models', class_path, "#{file_name}_observer.rb")
       end
 
     end

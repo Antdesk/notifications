@@ -13,9 +13,11 @@ module Rails
         template 'initializer.rb', 'config/initializers/notifications_initializer.rb'
       end
 
+=begin
       def create_observer_file
         template 'notification.rb', File.join('app/models', class_path, "virtual_machine_observer.rb") if options.create?
       end
+=end
     end
   end
 end
