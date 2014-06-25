@@ -1,5 +1,4 @@
 require "notifications/version"
-require "notifications/core_ext"
 
 %w{ models }.each do |dir|
   path = File.join(File.dirname(__FILE__), 'app', dir)
