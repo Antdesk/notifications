@@ -1,3 +1,0 @@
-class NotificationsGenerator < NamedBase
-
-end
