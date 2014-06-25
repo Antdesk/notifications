@@ -11,7 +11,4 @@ module Notifications
   def self.notification
     "notifications"
   end
-  class Application < Rails::Application
-    config.active_record.observers = :bird_observer
-  end
 end
