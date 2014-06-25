@@ -7,6 +7,10 @@ module ActiveRecord
 
       source_root File.expand_path("../templates", __FILE__)
 
+      def add_my_initializer
+        template 'initializer.rb', 'config/initializers/notifications_initializer.rb'
+      end
+
       def create_observer_file
         template 'notification.rb', File.join('app/models', class_path, "#{file_name}_observer.rb")
       end
