@@ -1,0 +1,3 @@
+class Notifications::Generator
+
+end
