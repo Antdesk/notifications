@@ -1,6 +1,6 @@
 module Rails
   module Generators
-    class NotificationGenerator < NamedBase #metagenerator
+    class NotificationGenerator < Base #metagenerator
       argument :model_name, :type => :string
       class_option :create, :type => :boolean, :default => false, :description => "Add create action"
       class_option :update, :type => :boolean, :default => false, :description => "Add update action"
