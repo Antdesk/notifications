@@ -2,7 +2,6 @@ module Rails
   module Generators
     class NotificationGenerator < Base #metagenerator
       hook_for :orm, :required => true
-      check_class_collision :suffix => "Observer"
       source_root File.expand_path("../templates", __FILE__)
 
       def add_my_initializer
