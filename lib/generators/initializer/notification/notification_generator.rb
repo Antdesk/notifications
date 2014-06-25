@@ -1,6 +1,6 @@
 require 'rails/generators/active_record'
 
-module ActiveRecord
+module Rails
   module Generators
     class NotificationGenerator < Base
       check_class_collision :suffix => "Observer"
