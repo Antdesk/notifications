@@ -1,6 +1,6 @@
 module Rails
   module Generators
-    class NotificationGenerator < NamedBase #metagenerator
+    class NotificationGenerator
       hook_for :orm, :required => true
       source_root File.expand_path("../templates", __FILE__)
 
