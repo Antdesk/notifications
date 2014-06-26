@@ -18,17 +18,31 @@ module Rails
 
       def add_random_notification
         if options.random?
-          line = "class #{class_name} < ActiveRecord::Base"
+          include = false
+          line = "include Notifications"
           gsub_file "app/models/#{file_name}.rb", /(#{Regexp.escape(line)})/mi do |match|
-            "#{match}\n \tinclude Notifications\n\tdef notify(para)\n\t\tnotify_random(para)\n\tend"
+            include = true
+          end
+          if include == false
+            line = "class #{class_name} < ActiveRecord::Base"
+            gsub_file "app/models/#{file_name}.rb", /(#{Regexp.escape(line)})/mi do |match|
+              "#{match}\n \tinclude Notifications\n\tdef notify(para)\n\t\tnotify_random(para)\n\tend"
+            end
           end
         end
       end
 
       def add_observer
-        line = "_observer;"
+        include = false
+        line = ":#{file_name}_observer"
         gsub_file 'config/initializers/notifications_initializer.rb', /(#{Regexp.escape(line)})/mi do |match|
-          "_observer,:#{file_name}_observer;"
+          include = true
+        end
+        if include == false
+          line = "_observer;"
+          gsub_file 'config/initializers/notifications_initializer.rb', /(#{Regexp.escape(line)})/mi do |match|
+            "_observer,:#{file_name}_observer;"
+          end
         end
       end
 
