@@ -15,17 +15,17 @@ module Rails
         template 'initializer.rb', 'config/initializers/notifications_initializer.rb'
       end
 
-      def add_first_observer
-        line = "#test"
-        gsub_file 'config/initializers/notifications_initializer.rb', /(#{Regexp.escape(line)})/mi do |match|
-          "config.active_record.observers = :<%=file_name%>_observer;"
-        end
-      end
-
       def add_observer
         line = "_observer;"
         gsub_file 'config/initializers/notifications_initializer.rb', /(#{Regexp.escape(line)})/mi do |match|
           "_observer,:#{file_name}_observer;"
+        end
+      end
+
+      def add_first_observer
+        line = "#test"
+        gsub_file 'config/initializers/notifications_initializer.rb', /(#{Regexp.escape(line)})/mi do |match|
+          "config.active_record.observers = :#{file_name}_observer;"
         end
       end
 
