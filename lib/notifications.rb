@@ -8,7 +8,7 @@ require "notifications/version"
 end
 
 module Notifications
-  def self.notification
-    "notifications"
+  def notify_random(para)
+    self.class.notify_observers :after_random, { action: self, para: para}
   end
 end

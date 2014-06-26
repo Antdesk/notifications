@@ -15,6 +15,15 @@ module Rails
         template 'initializer.rb', 'config/initializers/notifications_initializer.rb'
       end
 
+      def add_random_notification
+        if options.random?
+          line = "class #{class_name} < ActiveRecord::Base"
+          gsub_file "app/models/#{file_name}.rb", /(#{Regexp.escape(line)})/mi do |match|
+            "#{match}/n /t include Notifications"
+          end
+        end
+      end
+
       def add_observer
         line = "_observer;"
         gsub_file 'config/initializers/notifications_initializer.rb', /(#{Regexp.escape(line)})/mi do |match|
