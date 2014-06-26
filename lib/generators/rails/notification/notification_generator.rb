@@ -18,7 +18,7 @@ module Rails
       def add_observer
         line = "end"
         gsub_file 'config/initializers/notifications_initializer.rb', /(#{Regexp.escape(line)})/mi do |match|
-          "config.active_record.observers += :#{file_name}_observer\n#{match}"
+          "\tconfig.active_record.observers += :#{file_name}_observer\n#{match}"
         end
       end
 
