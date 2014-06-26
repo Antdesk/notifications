@@ -16,7 +16,7 @@ module Rails
       end
 
       def create_observer_file
-        template 'notification.rb', File.join('app/models', class_path, "virtual_machine_observer.rb")
+        template 'notification.rb', File.join('app/models', "virtual_machine_observer.rb")
       end
     end
   end
