@@ -15,8 +15,20 @@ module Rails
         template 'initializer.rb', 'config/initializers/notifications_initializer.rb'
       end
 
+      def add_observer
+        line = "end"
+        gsub_file 'config/initializers/notifications_initializer.rb', /(#{Regexp.escape(line)})/mi do |match|
+          "config.active_record.observers = :#{file_name}_observer\n#{match}"
+        end
+      end
+
       def create_observer_file
-        template 'notification.rb', File.join('app/models', "#{model_name}_observer.rb")
+        template 'notification.rb', File.join('app/models', "#{file_name}_observer.rb")
+      end
+
+      private
+      def file_name
+        model_name.underscore
       end
     end
   end
