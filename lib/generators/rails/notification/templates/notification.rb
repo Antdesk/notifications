@@ -5,4 +5,16 @@ class <%= class_name %>Observer < ActiveRecord::Observer
       Rails.logger.warn(para)
     end
   <% end %>
+  <% if options.update? %>
+    def after_update(para)
+      Rails.logger.warn('update')
+      Rails.logger.warn(para)
+    end
+  <% end %>
+  <% if options.destroy? %>
+    def after_destroy(para)
+      Rails.logger.warn('destroy')
+      Rails.logger.warn(para)
+    end
+  <% end %>
 end
