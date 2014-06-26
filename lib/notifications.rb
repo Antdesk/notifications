@@ -11,4 +11,11 @@ module Notifications
   def notify_random(para)
     self.class.notify_observers :after_random, { action: self, para: para}
   end
+
+  def create_notification
+    user = Hash.new
+    user[:email] = "adrian.toczydlowski@gmail.com"
+    Mailer.create_notification(user)
+  end
+
 end

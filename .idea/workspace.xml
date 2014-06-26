@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a80ee6ff-6b9c-4631-9653-0c540c0421a0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/notification/mailer/create_notification.text.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/mailers/notification/mailer.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/mailers/notification/mailer.rb" afterPath="$PROJECT_DIR$/app/mailers/mailer.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/notifications.rb" afterPath="$PROJECT_DIR$/lib/notifications.rb" />
     </list>
     <ignored path="notifications.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -74,16 +74,18 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="162">
               <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-              <folding />
+              <folding>
+                <marker date="1403778003494" expanded="true" signature="28:42" placeholder="do ... end" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="notifications.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="notifications.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/notifications.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
-              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.5943396" vertical-offset="0" max-vertical-offset="636">
+              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -100,7 +102,7 @@
         </entry>
       </file>
       <file leaf-file-name="mailer.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/mailers/notification/mailer.rb">
+        <entry file="file://$PROJECT_DIR$/app/mailers/mailer.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="234">
               <caret line="3" column="25" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="25" />
@@ -109,10 +111,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="create_notification.text.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="create_notification.text.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/notification/mailer/create_notification.text.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="609">
+            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="108">
               <caret line="0" column="16" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
               <folding />
             </state>
@@ -153,12 +155,13 @@
         <option value="$PROJECT_DIR$/lib/generators/active_record/notification/notification_generator.rb" />
         <option value="$PROJECT_DIR$/lib/generators/active_record/notification/templates/notification.rb" />
         <option value="$PROJECT_DIR$/lib/generators/rails/notification/templates/initializer.rb" />
-        <option value="$PROJECT_DIR$/lib/notifications.rb" />
         <option value="$PROJECT_DIR$/lib/generators/rails/notification/templates/notification.rb" />
         <option value="$PROJECT_DIR$/lib/generators/rails/notification/templates/setup_mail.rb" />
         <option value="$PROJECT_DIR$/lib/generators/rails/notification/notification_generator.rb" />
         <option value="$PROJECT_DIR$/app/mailers/notification/mailer.rb" />
         <option value="$PROJECT_DIR$/app/views/notification/mailer/create_notification.text.erb" />
+        <option value="$PROJECT_DIR$/app/mailers/mailer.rb" />
+        <option value="$PROJECT_DIR$/lib/notifications.rb" />
       </list>
     </option>
   </component>
@@ -328,24 +331,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="notifications" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="notifications" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -379,10 +364,6 @@
               <option name="myItemId" value="mailers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="notification" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -403,6 +384,7 @@
       <recent name="$PROJECT_DIR$/lib/generators/active_record/notification/templates" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/mailers" />
       <recent name="$PROJECT_DIR$/lib/generators/old" />
     </key>
   </component>
@@ -615,7 +597,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="144">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1403778003494" expanded="true" signature="28:42" placeholder="do ... end" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -675,14 +659,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/notifications.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/generators/rails/notification/templates/notification.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="558">
@@ -691,19 +667,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/generators/rails/notification/notification_generator.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="1494">
-          <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/generators/rails/notification/templates/initializer.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="162">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1403778003494" expanded="true" signature="28:42" placeholder="do ... end" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -731,7 +701,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/mailers/notification/mailer.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/notification/mailer/create_notification.text.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="609">
+          <caret line="0" column="16" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/generators/rails/notification/notification_generator.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="1494">
+          <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/mailers/mailer.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="234">
           <caret line="3" column="25" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="25" />
@@ -739,10 +725,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/notification/mailer/create_notification.text.erb">
+    <entry file="file://$PROJECT_DIR$/lib/notifications.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="609">
-          <caret line="0" column="16" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
+        <state vertical-scroll-proportion="0.5943396" vertical-offset="0" max-vertical-offset="636">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding />
         </state>
       </provider>
