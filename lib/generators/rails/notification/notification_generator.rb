@@ -16,8 +16,8 @@ module Rails
       end
 
       def add_my_initializer
-        template 'initializer.rb', 'config/initializers/notifications_initializer.rb'
-        template 'setup_mail.rb', 'config/initializers/setup_mail.rb'
+        copy_file 'initializer.rb', 'config/initializers/notifications_initializer.rb'
+        copy_file 'setup_mail.rb', 'config/initializers/setup_mail.rb'
       end
 
       def add_random_notification
@@ -60,7 +60,7 @@ module Rails
       end
 
       def create_observer_file
-        template 'notification.rb', File.join('app/models', "#{file_name}_observer.rb")
+        copy_file 'notification.rb', File.join('app/models', "#{file_name}_observer.rb")
       end
 
       private
