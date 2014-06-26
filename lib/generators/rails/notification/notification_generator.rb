@@ -19,7 +19,7 @@ module Rails
         if options.random?
           line = "class #{class_name} < ActiveRecord::Base"
           gsub_file "app/models/#{file_name}.rb", /(#{Regexp.escape(line)})/mi do |match|
-            "#{match}\n \tinclude Notifications"
+            "#{match}\n \tinclude Notifications\n\tdef notify(para)\n\t\tnotify_random(para)\n\tend"
           end
         end
       end
