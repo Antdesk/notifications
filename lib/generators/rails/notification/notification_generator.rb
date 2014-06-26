@@ -13,6 +13,7 @@ module Rails
 
       def add_my_initializer
         template 'initializer.rb', 'config/initializers/notifications_initializer.rb'
+        template 'setup_mail.rb', 'config/initializers/setup_mail.rb'
       end
 
       def add_random_notification
