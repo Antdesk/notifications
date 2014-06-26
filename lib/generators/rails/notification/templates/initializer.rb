@@ -1,4 +1,3 @@
 Rails.application.configure do
-  config.active_record.observers = :test
+  config.active_record.observers = :<%=file_name%>_observer
 end
-#:bird_observer
