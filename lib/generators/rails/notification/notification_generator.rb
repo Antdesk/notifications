@@ -60,6 +60,7 @@ module Rails
       end
 
       def create_observer_file
+        remove_file File.join('app/models', "#{file_name}_observer.rb")
         copy_file 'notification.rb', File.join('app/models', "#{file_name}_observer.rb")
       end
 
