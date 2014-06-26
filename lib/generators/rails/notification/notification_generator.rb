@@ -22,6 +22,7 @@ module Rails
           line = "include Notifications"
           gsub_file "app/models/#{file_name}.rb", /(#{Regexp.escape(line)})/mi do |match|
             include = true
+            "#{match}"
           end
           if include == false
             line = "class #{class_name} < ActiveRecord::Base"
@@ -37,6 +38,7 @@ module Rails
         line = ":#{file_name}_observer"
         gsub_file 'config/initializers/notifications_initializer.rb', /(#{Regexp.escape(line)})/mi do |match|
           include = true
+          "#{match}"
         end
         if include == false
           line = "_observer;"
