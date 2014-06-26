@@ -1,4 +1,4 @@
-class Mailer < ActionMailer::Base
+class Notifications::Mailer < ActionMailer::Base
   default :from => 'no-replay@onestepcloud.com'
 
   def create_notification(user)
