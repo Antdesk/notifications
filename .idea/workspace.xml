@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a80ee6ff-6b9c-4631-9653-0c540c0421a0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/generators/active_record/notification/notification_generator.rb" afterPath="$PROJECT_DIR$/lib/generators/active_record/notification/notification_generator.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/generators/rails/notification/notification_generator.rb" afterPath="$PROJECT_DIR$/lib/generators/rails/notification/notification_generator.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="notifications.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,8 +42,8 @@
       <file leaf-file-name="notification_generator.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/generators/active_record/notification/notification_generator.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4528302" vertical-offset="0" max-vertical-offset="636">
-              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.28301886" vertical-offset="0" max-vertical-offset="636">
+              <caret line="10" column="100" selection-start-line="10" selection-start-column="100" selection-end-line="10" selection-end-column="100" />
               <folding />
             </state>
           </provider>
@@ -725,8 +725,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/generators/active_record/notification/notification_generator.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4528302" vertical-offset="0" max-vertical-offset="636">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.28301886" vertical-offset="0" max-vertical-offset="636">
+          <caret line="10" column="100" selection-start-line="10" selection-start-column="100" selection-end-line="10" selection-end-column="100" />
           <folding />
         </state>
       </provider>
