@@ -1,6 +1,8 @@
+require 'rails/generators/active_record'
+
 module Rails
   module Generators
-    class NotificationGenerator < NamedBase #metagenerator
+    class NotificationGenerator < Base #metagenerator
       argument :model_name, :type => :string
       class_option :create, :type => :boolean, :default => false, :description => "Add create action"
       class_option :update, :type => :boolean, :default => false, :description => "Add update action"
@@ -13,11 +15,9 @@ module Rails
         template 'initializer.rb', 'config/initializers/notifications_initializer.rb'
       end
 
-=begin
       def create_observer_file
-        template 'notification.rb', File.join('app/models', class_path, "virtual_machine_observer.rb") if options.create?
+        template 'notification.rb', File.join('app/models', class_path, "virtual_machine_observer.rb")
       end
-=end
     end
   end
 end
