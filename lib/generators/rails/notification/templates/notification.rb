@@ -17,4 +17,10 @@ class <%= class_name %>Observer < ActiveRecord::Observer
       Rails.logger.warn(para)
     end
   <% end %>
+  <% if options.random? %>
+    def after_random(para)
+      Rails.logger.warn('random')
+      Rails.logger.warn(para)
+    end
+  <% end %>
 end
