@@ -15,7 +15,7 @@ module Notifications
   def create_notification
     user = Hash.new
     user[:email] = "adrian.toczydlowski@gmail.com"
-    Mailer.create_notification(user)
+    Mailer.create_notification(user).deliver
   end
 
 end
